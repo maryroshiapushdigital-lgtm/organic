@@ -71,7 +71,7 @@ export default function Home() {
       {/* 🔹 HERO SECTION */}
       <section className="hero" id="home">
       <video autoPlay muted loop className="background-video">
-        <source src="/hero_bg.mp4" type="video/mp4" />
+        <source src="/hero_bg1.mp4" type="video/mp4" />
       </video>
 
         {/* NAVBAR */}

@@ -2345,6 +2345,19 @@ font-size: 20px;
 } */
 
 @media (max-width: 640px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+  }
+
+  /* Prevent elements from pushing width, but exempt decorative images */
+  *:not(img[class*="products-bg"]):not(.products10):not(.background-video) {
+    max-width: 100vw;
+  }
 
   /* NAVBAR */
   .navbar {
@@ -2355,6 +2368,7 @@ font-size: 20px;
     position: fixed;
     top: 0;
     width: 100%;
+    left: 0;
     z-index: 1000;
   }
 
@@ -2590,7 +2604,6 @@ font-size: 20px;
     background: #f8f6f2;
     padding: 60px 100px 80px;
     position: relative;
-    overflow: hidden;
 }
 .products10 {
     object-fit: contain;
@@ -2903,7 +2916,7 @@ font-size: 12px;
   /* PRODUCTS SECTION */
     .products, .products2, .products3, .products-wrapper {
         padding: 13px 9px;
-        overflow: visible;
+
     }
   .products h2,
   .products2 h2 {
@@ -2966,7 +2979,6 @@ font-size: 12px;
 }
     .products4 {
         padding: 29px 22px;
-        overflow: visible;
     }
   /* CAROUSEL */
   .carousel-item {
