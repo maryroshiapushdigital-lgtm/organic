@@ -70,31 +70,42 @@ export default function Home() {
 
       {/* 🔹 HERO SECTION */}
       <section className="hero" id="home">
+      <video autoPlay muted loop className="background-video">
+        <source src="/hero_bg.mp4" type="video/mp4" />
+      </video>
 
         {/* NAVBAR */}
         <div className={`navbar ${scrolled ? "navbar-scroll" : ""}`}>
-          <div className="logo">
-            <a href="#home">
-              <img src="/Organic_logo.png" alt="logo" />
-            </a>
-          </div>
 
+          <a href="#home"     className="nav-link" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#about"    className="nav-link" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#products" className="nav-link" onClick={() => setMenuOpen(false)}>Products</a>
+
+          <a href="#home" className="logo">
+            <img src="/logo11.png" alt="logo" />
+          </a>
+
+          <a href="#benefits" className="nav-link" onClick={() => setMenuOpen(false)}>Benefits</a>
+          <a href="#contact"  className="nav-link" onClick={() => setMenuOpen(false)}>Contact</a>
+          <button className="order-btn nav-link" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Order Now</button>
+
+          {/* MOBILE HAMBURGER */}
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <div className={`bar ${menuOpen ? "open" : ""}`}></div>
             <div className={`bar ${menuOpen ? "open" : ""}`}></div>
             <div className={`bar ${menuOpen ? "open" : ""}`}></div>
           </div>
 
+          {/* MOBILE MENU */}
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#home"     onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#about"    onClick={() => setMenuOpen(false)}>About</a>
             <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
             <a href="#benefits" onClick={() => setMenuOpen(false)}>Benefits</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-            <button className="order-btn mobile-only" onClick={() => { setMenuOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Order Now</button>
+            <a href="#contact"  onClick={() => setMenuOpen(false)}>Contact</a>
+            <button className="order-btn" onClick={() => { setMenuOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Order Now</button>
           </div>
 
-          <button className="order-btn desktop-only" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Order Now</button>
         </div>
 
         {/* HERO CONTENT */}
@@ -103,7 +114,7 @@ export default function Home() {
 
           <h1>
             Pure Organic Nutrition <br />
-            for a Healthier Life
+            for a <span style={{color:"#E6C9A8"}}>Healthier Life</span>
           </h1>
 
           <p className="des">
@@ -182,15 +193,15 @@ export default function Home() {
 
           </div> <div className="stats">
             <div>
-              <h2>17+</h2>
+              <h2>17+ <img className= "star" src="/star.png" /></h2>
               <p>Heritage Products</p>
             </div>
             <div>
-              <h2>100%</h2>
+              <h2>100% <img className= "star" src="/star.png" /></h2>
               <p>Organic & Natural</p>
             </div>
             <div>
-              <h2>0</h2>
+              <h2>0 <img className= "star"src="/star.png" /></h2>
               <p>Preservatives</p>
             </div>
           </div>
@@ -308,7 +319,7 @@ export default function Home() {
 
               {[
                 {
-                  img: "/puttu11.png",
+                  img: "/puttu111.png",
                   alt: "puttu",
                   badge: "badge3",
                   badgeText: "Puttu Flour",
@@ -321,7 +332,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  img: "/puttu22.png",
+                  img: "/puttu222.png",
                   alt: "idiyappam",
                   badge: "badge3 red",
                   badgeText: "Idiyappam Flour",
@@ -334,7 +345,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  img: "/puttu33.png",
+                  img: "/puttu333.png",
                   alt: "puttu",
                   badge: "badge3 yellow",
                   badgeText: "Puttu Flour",
@@ -347,7 +358,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  img: "/puttu44.png",
+                  img: "/puttu444.png",
                   alt: "puttu",
                   badge: "badge0",
                   badgeText: "Idiyappam Flour",
@@ -360,7 +371,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  img: "/puttu55.png",
+                  img: "/puttu555.png",
                   alt: "puttu",
                   badge: "badge9",
                   badgeText: "Puttu Flour",
@@ -373,7 +384,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  img: "/puttu99.png",
+                  img: "/puttu999.png",
                   alt: "puttu",
                   badge: "badge9",
                   badgeText: "Idiyappam Flour",
@@ -464,7 +475,7 @@ export default function Home() {
 
                 {[
                   {
-                    img: "/soup22.png",
+                    img: "/soup222.png",
                     alt: "soup",
                     badge: "badge4",
                     badgeText: "Soup Mix",
@@ -477,7 +488,7 @@ export default function Home() {
                     ],
                   },
                   {
-                    img: "/soup33.png",
+                    img: "/soup333.png",
                     alt: "soup",
                     badge: "badge4 red",
                     badgeText: "Soup Mix",
@@ -490,7 +501,7 @@ export default function Home() {
                     ],
                   },
                   {
-                    img: "/soup44.png",
+                    img: "/soup444.png",
                     alt: "booster",
                     badge: "badge4 yellow",
                     badgeText: "Iron Booster",
@@ -503,7 +514,7 @@ export default function Home() {
                     ],
                   },
                   {
-                    img: "/soup55.png",
+                    img: "/soup555.png",
                     alt: "soup",
                     badge: "badge56",
                     badgeText: "Immune Booster",
@@ -516,7 +527,7 @@ export default function Home() {
                     ],
                   },
                   {
-                    img: "/soup88.png",
+                    img: "/soup888.png",
                     alt: "soup",
                     badge: "badge56",
                     badgeText: "Kali Mix",
@@ -579,7 +590,7 @@ export default function Home() {
 
             {[
               {
-                img: "/malta11.png",
+                img: "/malt11.png",
                 badge: "badge5",
                 title: "Beetroot Multivitamin Malt",
                 desc: "Detoxify and glow naturally",
@@ -591,7 +602,7 @@ export default function Home() {
                 ],
               },
               {
-                img: "/malta22.png",
+                img: "/malt22.png",
                 badge: "badge5 yellow",
                 title: "Panchamirtha Malt",
                 desc: "Five-fold traditional wellness blend",
@@ -777,8 +788,8 @@ export default function Home() {
           <div className="contact-info">
 
             <div className="info-box">
-              <div className="info-icon2">
-                <img src="/phn.png" alt="phone" />
+              <div className="info-icon">
+                <img src="/ph.png" alt="phone" />
               </div>
               <div>
                 <span className="phone">PHONE</span>
@@ -787,22 +798,22 @@ export default function Home() {
             </div>
 
             <div className="info-box">
-              <div className="info-icon2">
-                <img src="/msg.png" alt="mail" />
+              <div className="info-icon">
+                <img src="/em.png" alt="email" />
               </div>
               <div>
                 <span className="phone">EMAIL</span>
-                <p>hello@organicheritage.com</p>
+                <p>organic@example.com</p>
               </div>
             </div>
 
             <div className="info-box">
-              <div className="info-icon2">
-                <img src="/loc.png" alt="location" />
+              <div className="info-icon">
+                <img src="/log1.png" alt="location" />
               </div>
               <div>
                 <span className="phone">LOCATION</span>
-                <p>Tamil Nadu, India</p>
+                <p>Tirunelveli, Tamil Nadu</p>
               </div>
             </div>
 
@@ -852,9 +863,12 @@ export default function Home() {
 
           {/* Left Section */}
           <div className="footer-col">
-            <p>
-              Bringing back the goodness of traditional organic foods that nourished generations.
+             <img  className="footer-logo" src="/logo11.png" alt="logo" />
+            <p className="shiyam">
+               
+              Bringing back the goodness of <br/>traditional organic foods that <br/>nourished generations.
             </p>
+          
           </div>
 
           {/* Quick Links */}
@@ -874,7 +888,7 @@ export default function Home() {
             <h4>Get in Touch</h4>
             <div className="para">
               <img src="/log1.png" alt="location" />
-              <p>
+              <p className="lak">
                 Lakshmanaswamy Salai, KK Nagar, Chennai - 600 078,<br />
                 Tamil Nadu, INDIA.
               </p>
